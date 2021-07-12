@@ -138,7 +138,7 @@ export const INPUTS = args => {
                     <BoxInputsType variant="Transparent">
                         <SubTitleInput variant="h2">My Text</SubTitleInput>
                         <InputsForm>
-                            <Inputs />
+                            <Inputs {...args} />
                         </InputsForm>
                     </BoxInputsType>
 
@@ -229,21 +229,13 @@ INPUTS.args = {
     title:
         "Angelique Boyer con toda la mejor actitud en su regreso triunfal a Tik Tok por segunda vez",
     icon: "Buscar",
-    size: "50",
+    iconsize: 50,
 };
 
 INPUTS.argTypes = {
-    size: {
-        control: {
-            type: "range",
-            min: 0,
-            max: 100,
-        },
-        description: "Input size",
-        defaultValue: 0,
-        table: {
-            defaultValue: { summary: 0 },
-        },
+    iconsize: {
+        control: "number",
+        description: "Icon Size",
     },
     title: {
         control: "text",
